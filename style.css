@@ -1,0 +1,93 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Full page background */
+body {
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Card container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 380px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Main Title */
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Form labels */
+label {
+    font-size: 15px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #0072ff;
+    transform: translateY(-2px);
+}
+
+/* Shortened URL List */
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#shorten-url {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+#shorten-url li {
+    background: rgba(255, 255, 255, 0.15);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
