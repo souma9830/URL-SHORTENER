@@ -1,4 +1,4 @@
-/* Reset defaults */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Full page background */
+
 body {
     background: linear-gradient(135deg, #4b79a1, #283e51);
     height: 100vh;
@@ -16,7 +16,6 @@ body {
     color: #fff;
 }
 
-/* Card container */
 .container {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
@@ -27,21 +26,20 @@ body {
     text-align: center;
 }
 
-/* Main Title */
 .container h1 {
     margin-bottom: 20px;
     font-size: 28px;
     font-weight: 600;
 }
 
-/* Form labels */
+
 label {
     font-size: 15px;
     margin-bottom: 6px;
     display: block;
 }
 
-/* Input fields */
+
 input {
     width: 100%;
     padding: 10px;
@@ -53,7 +51,6 @@ input {
     background: rgba(255, 255, 255, 0.9);
 }
 
-/* Submit button */
 button {
     width: 100%;
     padding: 12px;
@@ -67,13 +64,12 @@ button {
     font-weight: 600;
 }
 
-/* Button hover effect */
+
 button:hover {
     background: #0072ff;
     transform: translateY(-2px);
 }
 
-/* Shortened URL List */
 h2 {
     margin-top: 20px;
     font-size: 20px;
