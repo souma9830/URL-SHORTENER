@@ -4,8 +4,5 @@ document.getElementById('shorten-form').addEventListener('submit',(event)=>{
     const url=formdata.get("url");
     const shortcode=formdata.get("shortcode");
     console.log(url);
-    console.log(shortcode);
-   
-   
-    
+    console.log(shortcode);   
 })
