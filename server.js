@@ -2,11 +2,16 @@ const http = require("http");
 const fs = require("fs").promises;
 const path = require("path");
 const crypto=require("crypto");
+const { link } = require("fs");
 const PORT = 3000;
 const DATA_FILE=path.join("data","link.json")
 const loadlink= async()=>{
     try {
         const data= await fs.readFile(DATA_FILE,"utf-8");
+        if (!data.trim()) {
+            await fs.writeFile(DATA_FILE, "{}");
+            return {};
+        }
         return JSON.parse(data)
     } catch (error) {
         if(error.code === "ENOENT"){
@@ -56,6 +61,11 @@ const server = http.createServer(async (req, res) => {
                 res.writeHead(404, { "Content-Type": "text/html" });
                 return res.end("404 Not Found");
             }
+        }
+        else if(req.url==="/links"){
+            const links= await loadlink();
+            res.writeHead(200, {"Content-Type":"application/json"});
+           return res.end(JSON.stringify(links))
         }
     }
     if(req.method=== "POST" && req.url==="/shorten"){
