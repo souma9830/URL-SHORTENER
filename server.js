@@ -67,7 +67,7 @@ const server = http.createServer(async (req, res) => {
             res.writeHead(200, {"Content-Type":"application/json"});
            return res.end(JSON.stringify(links))
         }
-        else{
+        else {
             const links=await loadlink();
             const sortcode=req.url.slice(1);
             if(links[sortcode]){
