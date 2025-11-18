@@ -67,6 +67,14 @@ const server = http.createServer(async (req, res) => {
             res.writeHead(200, {"Content-Type":"application/json"});
            return res.end(JSON.stringify(links))
         }
+        else{
+            const links=await loadlink();
+            const sortcode=req.url.slice(1);
+            if(links[sortcode]){
+                res.writeHead(302, { "Location": links[sortcode] });
+                return res.end();
+            }
+        }
     }
     if(req.method=== "POST" && req.url==="/shorten"){
 
